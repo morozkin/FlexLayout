@@ -19,13 +19,3 @@ FOUNDATION_EXPORT double FlexLayoutVersionNumber;
 
 //! Project version string for FlexLayout.
 FOUNDATION_EXPORT const unsigned char FlexLayoutVersionString[];
-
-// In this header, you should import all the public headers of your framework using
-
-// yoga
-#import "Yoga.h"
-#import "YGEnums.h"
-#import "YGMacros.h"
-
-// YogaKit
-#import "UIView+Yoga.h"

@@ -18,10 +18,10 @@
 		24AE97411FEAF30A00995987 /* UIView+FlexLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97321FEAF30A00995987 /* UIView+FlexLayout.swift */; };
 		24AE97421FEAF30A00995987 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97331FEAF30A00995987 /* Percent.swift */; };
 		24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97351FEAF30A00995987 /* FlexLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97381FEAF30A00995987 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE97381FEAF30A00995987 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		24AE97461FEAF30A00995987 /* UIView+Yoga.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24AE97391FEAF30A00995987 /* UIView+Yoga.mm */; };
 		24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973A1FEAF30A00995987 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		24AE97481FEAF30A00995987 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973B1FEAF30A00995987 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24AE97481FEAF30A00995987 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AE973B1FEAF30A00995987 /* YGLayout.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		24AE97491FEAF30A00995987 /* YGLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973C1FEAF30A00995987 /* YGLayout.mm */; };
 		24AE974A1FEAF30A00995987 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */; };
 		24DA37691EF843C500D1AB2F /* FlexLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA37681EF843C500D1AB2F /* FlexLayoutTests.swift */; };
@@ -111,6 +111,8 @@
 		C07B09F02045303000E03251 /* YGEnums.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
 		C07B09F12045303000E03251 /* YGStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
 		C07B09F22045303000E03251 /* YGNodePrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNodePrint.h; sourceTree = "<group>"; };
+		F9C7A9A120A3ACEE005E220E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		F9C7A9A220A3AD29005E220E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				24AE973B1FEAF30A00995987 /* YGLayout.h */,
 				24AE973C1FEAF30A00995987 /* YGLayout.mm */,
 				24AE973D1FEAF30A00995987 /* YGLayoutExtensions.swift */,
+				F9C7A9A220A3AD29005E220E /* module.modulemap */,
 			);
 			path = YogaKit;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				C07B09EA2045303000E03251 /* Yoga-internal.h */,
 				C07B09E52045303000E03251 /* Yoga.cpp */,
 				C07B09EF2045303000E03251 /* Yoga.h */,
+				F9C7A9A120A3ACEE005E220E /* module.modulemap */,
 			);
 			name = yoga;
 			path = Sources/yoga;
@@ -264,8 +268,8 @@
 				C07B09F92045303000E03251 /* YGNode.h in Headers */,
 				24AE97431FEAF30A00995987 /* FlexLayout.h in Headers */,
 				C07B09FD2045303000E03251 /* Utils.h in Headers */,
-				24AE97481FEAF30A00995987 /* YGLayout.h in Headers */,
 				C07B09FE2045303000E03251 /* YGLayout.h in Headers */,
+				24AE97481FEAF30A00995987 /* YGLayout.h in Headers */,
 				24AE97451FEAF30A00995987 /* UIView+Yoga.h in Headers */,
 				C07B09F62045303000E03251 /* YGMacros.h in Headers */,
 				24AE97471FEAF30A00995987 /* YGLayout+Private.h in Headers */,
@@ -607,6 +611,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/YogaKit $(SRCROOT)/Sources/yoga";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -637,6 +642,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/YogaKit $(SRCROOT)/Sources/yoga";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

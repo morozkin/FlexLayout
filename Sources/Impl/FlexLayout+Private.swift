@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import yoga
 
 extension Flex {
     func valueOrUndefined(_ value: CGFloat?) -> YGValue {
         if let value = value {
-            return YGValue(value)
+            return YGValue(value: Float(value), unit: YGUnitPoint)
         } else {
             return YGValueUndefined
         }
@@ -19,7 +20,7 @@ extension Flex {
     
     func valueOrAuto(_ value: CGFloat?) -> YGValue {
         if let value = value {
-            return YGValue(value)
+            return YGValue(value: Float(value), unit: YGUnitPoint)
         } else {
             return YGValueAuto
         }
